@@ -1,0 +1,18 @@
+{
+  "name": "loan-ui",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Financial Inc Loan App",
+  "repository": "https://github.bmc.com/galapagos/loan-ui",
+  "license": "BMC Software, Inc.",
+  "dependencies": {
+    "angular-ui-bootstrap": "^1.3.3",
+    "bmc-dpl-framework": "^2.9.0",
+    "bmc-dpl-iconfont": "^2.7.1",
+    "bootstrap": "^3.3.6"
+  },
+  "scripts": {
+    "prestart": "echo \"var LOAN_ACCOUNT_API_PORT=9061; \nvar LOAN_RATE_API_PORT=9062; \nvar LOAN_VERSION=${LOAN_VERSION:1};\" > env.js",
+    "start": "http-server -p 8000 -c-1"
+  }
+}

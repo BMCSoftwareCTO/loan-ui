@@ -1,0 +1,616 @@
+/* This file defines styles that the customer can change to re-skin and re-brand the application */
+
+/* The 4 randomly selected background images for the login page can be customized by providing
+   your own images in the <Install Directory>\Cloud_UI\custom\skinning\img\ directory with the following file names:
+    login-cover-1.jpg, login-cover-2.jpg, login-cover-3.jpg, login-cover-4.jpg
+    Each time you load the page, one of those 4 images will be shown.   They can all be the same image if you want */
+
+/* To remove all background images from the login page and apply a background color */
+#login_background {
+    /* background-image: url('../img/transparent.gif') !important;
+    background-color: #efefef; */
+}
+
+/* The company logo on the login page */
+.login-form__logo-bmc {
+    width: 71px;
+    height: 30px;
+    margin-left: 0px;   /* This margin can be changed to center or right-align the logo */
+    background-image: url('../img/bmc-logo.png');
+    background-repeat: no-repeat;
+}
+
+/* The styling of the Product Suite name on the login page */
+.login-form__logo-product {
+    color: #f86e00;
+    font-size: 19px;
+    margin-left: 26px;
+    width: 250px;
+    height: 36px;
+}
+
+/* The text of the Product Suite name on the login page */
+.login-form__logo-product:before {
+    content: "Financial Loan Services";
+}
+
+/* The box containing the fields for logging in */
+.login_form {
+    background-color: #ffffff;
+    width: 310px;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+/* The login page button */
+.btn-clm-login {
+    width: 100%;
+    color: white;
+    background-color: #1aa99c;
+    border-color: #1aa99c;
+}
+
+/* The login page button hover, focus and active style */
+.btn-clm-login:hover, .btn-clm-login:focus, .btn-clm-login:active {
+    color: white;
+    background-color: #137d73;
+    border-color: #12746b;
+}
+
+/* The header for the login page marketing content */
+.login-content__header {
+    color: #327FB5;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* The body for the login page marketing content */
+.login-content__item {
+    color: #327FB5;
+}
+
+/* NEW FOR 4.6  A place to put a localized custom notification message that will appear at all times on the login page.
+   The message can be specified in <customization directory>/i18n/resources-locale_<locale>.js as the value
+   for the customfields.login.notificationmessage key.
+   To show the message on the page, change the "display: none;" style below to "display: block;" */
+.custom_notification-container {
+    z-index: 1030;
+    background-color: #ffffff;
+    padding: 10px;
+    position: fixed;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    top: 48px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: none;
+}
+
+/* The rest of the styles apply after you have logged into the application */
+
+/* The upper portion of the banner at the top of the application after logging in */
+#banner_main-top-banner {
+    background-color: #f2f2f2;
+    /* background-image: url("../img/my_application_banner.png");
+    background-repeat: no-repeat; */
+}
+
+/* The lower portion of the banner at the top of the application after logging in */
+#banner_main-top-banner #banner_lower {
+    background-color: #414042;   /* set to transparent if you would like the background image in the upper portion to also be here */
+    border-top: 2px solid #fe5000;  /* set to transparent if you would like to remove this border */
+}
+
+/* The color of the text for the Application name in the top banner */
+#banner_main-top-banner .banner_site-title{
+    color: #f86e00;
+}
+
+/* The color of the quota availability icon located in the top banner */
+#banner_user-settings-dropdown span.banner_quota-icon,
+#banner_user-settings-dropdown span.banner_quota-icon:hover, #banner_user-settings-dropdown span.banner_quota-icon:focus {
+    color: #f86e00;
+    background: transparent;
+}
+
+/* NEW FOR 4.6  Additional style to set the color of the quota availability icon located in teh top banner */
+#banner_user-settings-dropdown span.banner_quotabg-icon,
+#banner_user-settings-dropdown span.banner_quotabg-icon:hover, #banner_user-settings-dropdown span.banner_quotabg-icon:focus {
+    color: #f86e00;
+}
+
+/* The color of the text for the logged in user name located in the top banner */
+#banner_main-user-dropdown span, #banner_main-user-dropdown span:hover, #banner_main-user-dropdown span:focus {
+    color: #808080;
+}
+
+/* The application name to display in the top banner */
+.banner_site-title:before {
+    content: "Financial Loan Services v";
+}
+
+/* The company logo to display in the top banner */
+.header-logo {
+    width: 71px;
+    height: 30px;
+    background-image: url('../img/bmc-logo.png');
+    background-repeat: no-repeat;
+}
+
+/* The color of the text for the application navigation links in the top banner */
+#banner_main-top-banner #banner_lower a {
+    color: #ffffff;
+}
+
+/* The color of the text for the application navigation links (while hovering over it) in the top banner */
+#banner_main-top-banner #banner_lower .nav > li > a:hover, #banner_main-top-banner #banner_lower .nav > li > a:focus {
+    color: #f86e00;
+}
+
+/* The color of the text for "My Cart" located in the top banner */
+.my-cart {
+    color: #ffffff;
+}
+
+/* The color of the text for "My Cart" (while hovering over it) located in the top banner */
+.my-cart:hover, .my-cart div:focus {
+    color: #f86e00;
+}
+
+/* The text of the Product Suite name on the About dialog */
+.about_dialog-productname:after {
+    content: "Financial Loan Services";
+}
+
+/* The product splash image on the About dialog */
+#about_dialog_image {
+    background-image: url('../img/about.png');
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+/* The text color of the Product Suite name and version on the About dialog */
+.banner_aboutdlg-imagediv-text {
+    color: #666666;
+}
+
+/* The width of the About dialog */
+.modal-dialog.dialog-about-width {
+    width: 470px !important;
+}
+
+/* Used for primary buttons throughout the application */
+.btn-clm-primary {
+    background-color: #f86e00;
+    color: #ffffff;
+}
+
+/* The hover and focus style used for primary buttons throughout the application */
+.btn-clm-primary:hover, .btn-clm-primary:focus {
+    background-color: #de5900;
+    color: #ffffff !important;
+}
+
+/* Used for secondary buttons throughout the application */
+.btn-bmc-light-gray {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #999999;
+}
+
+/* The hover and focus style used for secondary buttons throughout the application */
+.btn-bmc-light-gray:hover, .btn-bmc-light-gray:focus {
+    background-color: #e5e5e5;
+    color: #333333 !important;
+    border: 1px solid #999999;
+}
+
+/* The color of the slider control */
+.ui-widget-header.ui-slider-range{
+    background: #00a79d;
+}
+
+/* The background color for day2 sliders */
+.ui-slider-range-increase{
+    background-color: #66cac4 !important;
+    z-index: 0 !important;
+}
+
+.ui-slider-mask-decrease{
+    background-color: #d9d9d9 !important;
+    z-index: 0 !important;
+}
+
+.ui-slider-initial{
+    background-color: #00a79d !important;
+    z-index: 1 !important;
+}
+
+/* The color of the in-use portion of legend of the availability progress bar */
+.quota_legend_inuse:before {
+    color: #00a79d;
+}
+
+/* The color of the in-use portion of the availability progress bar */
+.quota_progress .progress-bar-inuse {
+    background-color: #00a79d;
+}
+
+/* The color of the increase portion and in cart portion(not implemented yet) of legend of the availability progress bar */
+.quota_legend_incart:before,
+.quota_legend_increasechange:before {
+    color: #66cac4;
+}
+
+/* The color of the increase portion and in cart portion(not implemented yet) of the availability progress bar */
+.quota_progress .progress-bar-incart,
+.quota_progress .progress-bar-increasechange {
+    background-color: #66cac4;
+}
+
+/* The color of the decrease portion of legend of the availability progress bar */
+.quota_legend_decreasechange:before {
+    color: #d9d9d9;
+}
+
+/* The color of the decrease portion of the availability progress bar */
+.quota_progress .progress-bar-decreasechange {
+    background-color: #d9d9d9;
+}
+
+/* The color of the customizable icon for Catalog offerings */
+.catalog_offering-configurable-label:before {
+    color: #00a79d;
+}
+
+/*The background color for the catalog header container*/
+.catalogheader_container {
+    background-color: #ffffff;
+}
+
+/*The background color for the server configuration header container*/
+.serverheader_container {
+    background-color: #ffffff;
+}
+
+/* The color of the active, hovered or focused Resource Type in the left navigation of My Resources */
+h5 a.active, h5 a:hover, h5 a:focus {
+    color: #de6102;
+}
+
+/* The color of hovered filter in the left navigation of My Requests, Catalog, Activity Logs */
+.requests-filter:hover, .filterHighlight > .requests-filter, .catalog-filter:hover, .filterHighlight > .catalog-filter, .myResourceFilterListFilterItem:hover, .filterHighlight > .myResourceFilterListFilterItem {
+    color: #de6102;
+}
+
+/* The background color of hovered filter in the left navigation of My Requests, Catalog badges, Activity logs */
+.requests-filter:hover >.badge, .filterHighlight .badge, .catalog-filter:hover >.badge{
+    background-color: #de6102;
+}
+
+/* The background color fo the active, hovered or focused Resource Type count in the left navigation of My Resources */
+h5 a.active .badge, h5 a:hover .badge, h5 a:focus .badge {
+    background-color: #de6102;
+}
+
+/* The color of the active, hovered or focused sub-navigation text for Catalog and My Resources */
+.sub-nav > li > a.active, .sub-nav > li > a:hover, .sub-nav > li > a:focus {
+    color: #de6102;
+}
+
+/* The links on the "My Cart" dropdown panel */
+.my-cart .dropdown-menu1 a {
+    color: #00a79d !important;
+}
+
+/* The links on the "My Cart" dropdown panel (hovered or focused) */
+.my-cart .dropdown-menu1 a:hover, .my-cart .dropdown-menu1 a:focus {
+    color: #137d73 !important;
+}
+
+/* MODIFIED FOR 4.6  The links on popups for cells within grids in My Resources.  Example:  "Add <text> as a filter" */
+.cellPopupLink {
+    color: #00a79d !important;
+}
+
+/* MODIFIED FOR 4.6  The links on popups for cells within grids in My Resources (hovered or focused) */
+.cellPopupLink:hover, .cellPopupLink:focus {
+    color: #137d73 !important;
+}
+
+/* The "New Rule" link text and icon for Monitoring Rules */
+.portlet-controls #addNewPolicyButton a {
+    color: #00a79d !important;
+}
+.portlet-controls #addNewPolicyButton a:hover {
+    color: #137d73 !important;
+}
+
+/* Text color of action links in configuration accordion panel headers */
+accordion .panel-heading .config-header-addbutton span {
+    color: #00a79d !important;
+}
+accordion .panel-heading .config-header-addbutton:hover span, accordion .panel-heading .config-header-addbutton:focus span {
+    color: #137d73 !important;
+}
+
+/* The text color for grid options links */
+.resources_gridoptions-transparent-btn .clm_text_link {
+    color: #00a79d;
+}
+
+/* Link hover style for links in the My Resources grids */
+.clm_text_link:hover, #divngGridTable .clm_text_link:hover, #divngGridTable .clm_text_link:focus {
+    color: #137d73;
+    text-decoration: underline;
+}
+
+/* Used for other links throughout the application */
+a {
+    color: #00a79d;
+}
+
+/* Used for other links throughout the application (hovered or focused) */
+a:hover, a:focus {
+    color: #137d73;
+}
+
+/* The background color for the odd rows in the My Resources grids */
+.ngRow.odd {
+    background-color: #ffffff;
+}
+
+/* The background color for the even rows in the My Resources grids */
+.ngRow.even {
+    background-color: #ffffff;
+}
+
+/* The background color for selected rows in the My Resources grids */
+.ngRow.selected {
+    background-color: #f2f2f2;
+}
+
+/* The background color for the hovered row in the My Resources grids */
+.ngRow:hover {
+    background-color: #f2f2f2;
+}
+
+/* The background color of an open accordion panel header */
+accordion .open .panel-heading {
+    background-color: #f2f2f2;
+}
+
+/* The text color on an open accordion panel header */
+accordion .open .panel-heading span {
+    color: #333333;
+}
+
+/* The background color of a closed accordion panel header */
+accordion .closed .panel-heading {
+    background-color: #f2f2f2;
+}
+
+/* The text color on a closed accordion panel header */
+accordion .closed .panel-heading span {
+    color: #333333;
+}
+
+/* The styles for the text and toggle control on the right side of an accordion panel header */
+accordion .panel-heading span.catalog_details_accordion_actions span{
+    font-size: 14px !important;
+    color: #333333;
+    opacity: 1.0 !important;
+    vertical-align: middle;
+}
+
+/* The styles for the accordion panel body */
+accordion .panel-group .panel, accordion .panel {
+    border-radius: 0px !important;
+    background-color: #ffffff;
+}
+.accordion_body_offering-config-fill, .accordion_body_offering-config-ellipsis {
+    background-color: #ffffff;
+}
+
+/* The background color the label on NIC tiles in the Network accordion panel */
+.niclabel {
+    background-color: #f2f2f2;
+    border: 1px solid #dddddd;
+}
+
+/* The background color of an accordion panel header for Troubleshooting and Dashboards */
+.panel .panel-heading {
+    background-color: #f2f2f2;
+}
+
+/* The text color on an accordion panel header for Troubleshooting and Dashboards */
+.panel .panel-heading span, .panel .panel-heading h3 {
+    color: #333333;
+}
+.troubleshoot_actionToggleButton {
+    color: #333333;
+}
+.troubleshoot_tasks_accordion a, .troubleshoot_tasks_accordion a:hover {
+    color: #333333;
+}
+
+/* The header font and background color and the border color for the Server Group accordion panel */
+.catalog-details_rs-header {
+    color: white;
+    background-color: #7c7c7c;
+}
+.catalog-details_rs-body .panel-group {
+    border: 1px #7c7c7c solid;
+}
+
+/* The header for dialogs that are not warnings or errors */
+.branded_dialog-header {
+    background-color: #414042;
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* The text color in the header for dialogs that are not warnings or errors */
+.branded_dialog-header-text {
+    color: #ffffff !important;
+}
+
+/* The border color used for section boxes (Example: Monitoring Rules) */
+.shcomponents #policies .box, .shcomponents #policies .boxh {
+    border-color: #f2f2f2 !important
+}
+
+/* The header color used for section boxes (Example: Monitoring Rules) */
+.shcomponents #policies .box.activepolicy div.box-header, .shcomponents #policies .boxh.activepolicy div.box-header {
+    background-color: #f2f2f2 !important
+}
+
+/* The header text color used for section boxes (Example: Monitoring Rules) */
+.shcomponents #policies .activepolicy .header-title-container h3 {
+    color: #333333;
+}
+
+/* MODIFIED FOR 4.6  The header icons in section boxes (Example: Monitoring Rules)  */
+.shcomponents #policies .activepolicy i {
+    color: #137d73;
+}
+
+/* The toolbar icons in the Performance charts for My Resources */
+.shcomponents .box.chartbox .box-header .header-buttons-container .box-btn i{
+    color: #00a79d;
+}
+
+/* The toolbar icons in the Performance charts for My Resources (hover or focus) */
+.shcomponents .box.chartbox .box-header .header-buttons-container .box-btn i:hover,
+.shcomponents .box.chartbox .box-header .header-buttons-container .box-btn i:focus{
+    color: #137d73;
+}
+
+/* override third party date picker styles in Cart Checkout to match the primary button style */
+.cart_cost-decommission-date .btn-success {
+    background-color: #f86e00;
+    border-color: #f86e00;
+    color: #ffffff;
+}
+.cart_cost-decommission-date .btn-success:hover, .cart_cost-decommission-date .btn-success:focus {
+    background-color: #de5900;
+    border-color: #de5900;
+    color: #ffffff !important;
+}
+
+/* override third party date picker styles in Cart Checkout to match the secondary button style */
+.cart_cost-decommission-date .btn-danger, .cart_cost-decommission-date .btn-info {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #999999;
+}
+.cart_cost-decommission-date .btn-danger:hover, .cart_cost-decommission-date .btn-info:hover,
+.cart_cost-decommission-date .btn-danger:focus, .cart_cost-decommission-date .btn-info:focus{
+    background-color: #e5e5e5;
+    color: #333333 !important;
+    border: 1px solid #999999;
+}
+
+/* override third party date picker styles in the Extend Decommission Date dialog to match the primary button style */
+.extendDecommission_extendDecommissionDate-decommission-date .btn-success {
+    background-color: #f86e00;
+    border-color: #f86e00;
+    color: #ffffff;
+}
+.extendDecommission_extendDecommissionDate-decommission-date .btn-success:hover,
+.extendDecommission_extendDecommissionDate-decommission-date .btn-success:focus{
+    background-color: #de5900;
+    border-color: #de5900;
+    color: #ffffff !important;
+}
+
+/* override third party date picker styles in the Extend Decommission Date dialog to match the secondary button style */
+.extendDecommission_extendDecommissionDate-decommission-date .btn-danger,
+.extendDecommission_extendDecommissionDate-decommission-date .btn-info {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #999999;
+}
+.extendDecommission_extendDecommissionDate-decommission-date .btn-danger:hover,
+.extendDecommission_extendDecommissionDate-decommission-date .btn-info:hover,
+.extendDecommission_extendDecommissionDate-decommission-date .btn-danger:focus,
+.extendDecommission_extendDecommissionDate-decommission-date .btn-info:focus{
+    background-color: #e5e5e5;
+    color: #333333 !important;
+    border: 1px solid #999999;
+}
+
+/* override third party date picker styles in the License Report's Change Duration dialog to match the primary button style */
+.license-datepicker-parent .btn-success {
+    background-color: #f86e00;
+    border-color: #f86e00;
+    color: #ffffff;
+}
+.license-datepicker-parent .btn-success:hover, .license-datepicker-parent .btn-success:focus {
+    background-color: #de5900;
+    border-color: #de5900;
+    color: #ffffff !important;
+}
+
+/* override third party date picker styles in the License Report's Change Duration dialog to match the secondary button style */
+.license-datepicker-parent .btn-danger, .license-datepicker-parent .btn-info {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #999999;
+}
+.license-datepicker-parent .btn-danger:hover, .license-datepicker-parent .btn-info:hover,
+.license-datepicker-parent .btn-danger:focus, .license-datepicker-parent .btn-info:focus{
+    background-color: #e5e5e5;
+    color: #333333 !important;
+    border: 1px solid #999999;
+}
+
+.clm_icon_font_size{
+    color: #ffffff;
+}
+
+.clm_icon_font_size:hover{
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+/* The background color for the odd rows in the Health Dashboard grids */
+.ui-grid-row:nth-child(odd){
+    background-color: #ffffff;
+}
+.expandableRow .ui-grid-row:nth-child(odd){
+    background-color: #ffffff;
+}
+
+/* The background color for the even rows in the Health Dashboard grids */
+.ui-grid-row:nth-child(even){
+    background-color: #ffffff;
+}
+
+.expandableRow .ui-grid-row:nth-child(even){
+    background-color: #ffffff;
+}
+
+/* The background color for selected rows in the Health Dashboard grids */
+.ui-grid-row-selected {
+    background-color: #f2f2f2;
+}
+
+/* The background color for the hovered row in the Health Dashboard grids */
+.ui-grid-row:hover {
+    background-color: #f2f2f2;
+}
+
+/* Override the third party styles for the user panel */
+.ui-widget-content {
+    background: #ffffff;
+}
+
+/* Override the third party styles for the user panel */
+.ui-widget input {
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 14px;
+}

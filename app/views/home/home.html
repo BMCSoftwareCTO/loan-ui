@@ -1,0 +1,59 @@
+
+<div class="container">
+
+    <div class="text-center">
+
+        <header class="text-center row" style="padding: 60px">
+            <h2>Customer Loan Rates</h2>
+        </header>
+
+        <div class="row">
+			<form style="margin: 15px">
+				<h3>Customer Lookup</h3>
+				<hr>
+				<p>Enter customer name to pull up their account.</p>
+				<br> 
+				<!-- <button style="float: right">Search</button> -->
+				<div style="overflow: hidden; padding-right: .5em;" class="col-xs-3 row-div" ng-class="{'col-xs-offset-2': $index}">
+				    <input type="text" class="form-control" name="formData.name"
+                        placeholder="Name" ng-model="formData.name" />
+				</div>
+
+				<div class="col-xs-1">
+					<button type="button" class="btn"
+						ng-click="searchAccount(formData.name)">
+						Search
+					</button>
+				</div>
+			</form>
+		</div><br>
+		<div class="col-xs-1" ng-show="formData.account.name">
+			<table class="table table-striped">
+				<tr>
+					<td>Name</td>
+					<td>Account#</td>
+				</tr>
+				<tr>
+					<td>{{formData.account.name}}</td>
+					<td>{{formData.account.number}}</td>
+				</tr>
+			</table>
+			<div class="col-xs-1">
+				<button type="button" class="btn"
+					ng-click="searchRates(formData.name)">Rates</button>
+			</div>
+			<br><br><br>
+			<div class="col-xs-1" ng-show="!!formData.rates.length">
+				<table class="table table-striped">
+					<tr>
+						<td>Percentage</td>
+						<td>Term</td>
+					</tr>
+					<tr ng-repeat="rate in formData.rates">
+						<td>{{rate.percentage}}%</td>
+						<td>{{rate.term}} years</td>
+					</tr>
+				</table>
+			</div>
+	</div>
+</div>
