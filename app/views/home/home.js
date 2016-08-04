@@ -37,8 +37,6 @@ angular.module('myApp.home', ['ui.router', 'myApp.loanApp'])
         }
         
         $scope.searchRates = function() {
-            console.log("bf formData");
-            console.log($scope.formData)
             $scope.formData.rates = rateService.searchRates();
             
             rateService.searchRates().then(function(rates) {

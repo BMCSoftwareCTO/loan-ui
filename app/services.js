@@ -21,12 +21,8 @@ angular.module('myApp')
         };
         
         this.searchAccount = function(name) {
-            console.log("bf search name");
-            console.log(name);
             if (name) {
                 var account = Restangular.one('accounts', name).get();
-                console.log("bf accounts");
-                console.log(account);
                 return account;
             }
         };
