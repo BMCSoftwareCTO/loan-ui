@@ -12,7 +12,7 @@
     "bootstrap": "^3.3.6"
   },
   "scripts": {
-    "prestart": "echo \"var LOAN_ACCOUNT_API_PORT=9061; \nvar LOAN_RATE_API_PORT=9062; \nvar LOAN_VERSION=${LOAN_VERSION:1};\" > env.js",
+    "prestart": "echo \"var LOAN_ACCOUNT_API_PORT=9061; \nvar LOAN_RATE_API_PORT=9062; \nvar LOAN_VERSION=${LOAN_VERSION};\" > env.js",
     "start": "http-server -p 8000 -c-1"
   }
 }
