@@ -13,6 +13,6 @@
   },
   "scripts": {
     "prestart": "echo \"var LOAN_ACCOUNT_API_PORT=9061; \nvar LOAN_RATE_API_PORT=9062; \nvar LOAN_VERSION=${LOAN_VERSION};\" > env.js",
-    "start": "http-server -p 8000 -c-1"
+    "start": "http-server -p 8001 -c-1"
   }
 }
