@@ -1,0 +1,10 @@
+[Unit]
+Description=loanui
+After=network.target
+
+[Service]
+ExecStart=/home/loanapp/loanui/start.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
