@@ -8,7 +8,6 @@ Homepage: <insert the upstream URL, if relevant>
 
 Package: loanui
 Architecture: all
-
+Depends:
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
-
