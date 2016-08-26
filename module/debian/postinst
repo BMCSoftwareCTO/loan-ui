@@ -22,7 +22,7 @@ source ~/.nvm/nvm.sh
 nvm --version
 
 nvm install v6.2.2
-nvm install -g http-server
+npm install -g http-server
 
 echo "=====>DONE #4"
 
