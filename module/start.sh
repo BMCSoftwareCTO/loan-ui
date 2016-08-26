@@ -1,8 +1,13 @@
 #!/bin/bash
 
 export PATH="/root/.nvm/versions/node/v6.2.2/bin/:$PATH"
-export LOAN_VERSION=1		
-cd /home/loanapp/loanui/dist
+echo "PATH=$PATH"
+echo "NPM path=$(which npm)"
+
+export LOAN_VERSION=1
+cd /home/loanapp/loanui
+echo "cd into $(pwd)"
+
+#/root/.nvm/versions/node/v6.2.2/bin/npm start
 npm start
-		
 
