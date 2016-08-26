@@ -10,12 +10,15 @@ echo "====>DONE #2"
 
 #3 install loanui
 sudo apt-get install loanui -y
+echo "====>DONE #3"
 
 #4 install nvm
 sudo curl https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
 source ~/.profile
+source ~/.bashrc
 
 sudo nvm --version
+
 sudo nvm install v6.2.2
 sudo nvm install -g http-server
 
