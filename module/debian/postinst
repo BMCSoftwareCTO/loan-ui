@@ -17,15 +17,15 @@ sudo curl https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | 
 source ~/.profile
 source ~/.bashrc
 
-sudo nvm --version
+nvm --version
 
-sudo nvm install v6.2.2
-sudo nvm install -g http-server
+nvm install v6.2.2
+nvm install -g http-server
 
 echo "=====>DONE #4"
 
 #5 copy service file
-sudo cp /home/loanui/loanapp/loanui.service /etc/systemd/system
+sudo cp /home/loanapp/loanui/loanui.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable loanui.service
 
