@@ -12,6 +12,10 @@ echo "====>DONE #2"
 sudo apt-get install loanui -y
 echo "====>DONE #3"
 
+#3.5 update permission
+chmod 755 /home/loanapp/loanui/start.sh
+echo "====>DONE #3.5"
+
 #4 install nvm
 sudo curl https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
 source ~/.profile
@@ -28,6 +32,8 @@ echo "=====>DONE #4"
 
 #5 copy service file
 sudo cp /home/loanapp/loanui/loanui.service /etc/systemd/system
+echo "====>DONE #5"
+
 sudo systemctl daemon-reload
 sudo systemctl enable loanui.service
 
