@@ -1,16 +1,16 @@
 #!/bin/bash
 
 #1 add repo
-sudo add-apt-repository -y "deb http://172.22.238.229:9999 trusty main"
-echo "====>DONE #1"
+#sudo add-apt-repository -y "deb http://172.22.238.229:9999 trusty main"
+#echo "====>DONE #1"
 
 #2 update repo
-sudo apt-get update
-echo "====>DONE #2"
+#sudo apt-get update
+#echo "====>DONE #2"
 
 #3 install loanui
-sudo apt-get install loanui -y
-echo "====>DONE #3"
+#sudo apt-get install loanui -y
+#echo "====>DONE #3"
 
 #3.5 update permission
 chmod 755 /home/loanapp/loanui/start.sh
@@ -28,21 +28,24 @@ nvm --version
 nvm install v6.2.2
 npm install -g http-server
 
+NPM_PATH=$(which npm)
+echo "npm path=====> $NPM_PATH"
 echo "=====>DONE #4"
 
 #5 copy service file
 sudo cp /home/loanapp/loanui/loanui.service /etc/systemd/system
 echo "====>DONE #5"
 
+#6 enable loanui.service
 sudo systemctl daemon-reload
 sudo systemctl enable loanui.service
 
-echo "====>DONE #5"
+echo "====>DONE #6"
 
-#6
+#7 start service  
 sudo systemctl start loanui.service
-
-
+sudo systemctl status loanui.service
+echo "=====>DONE #7"
 
 echo "====>complete"
 
