@@ -51,9 +51,15 @@
   <script src="components/version/interpolate-filter.js"></script>
 </head>
 <body>
+  
+  
   <div ng-include="'banner/topBanner.html'"></div>
   
   <div ui-view="mainView"></div>
 
+  <script>
+    document.write("Site is at: " + document.location.href + ".");
+  </script>
+  
 </body>
 </html>
